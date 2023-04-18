@@ -1,6 +1,11 @@
 // @ts-check
+const { add, multiply, subtract, divide } = require('./calculator')
 
-{/* ADDING TYPES */}
+/**
+ * @file index.js is the root file for this example app
+ * @author Travor Johnsson
+ * @see <a href="https://johnssonmedia.com"> Johnsson Media </a>
+ */
 
 /**
  * Student Name
@@ -53,3 +58,42 @@ const student = {
     age: 19,
     isActive: true
 }
+
+/**
+ * Class to create a person object
+ */
+class Person {
+    /**
+     * 
+     * @param {Object} personInfo - Information about the person
+     */
+    constructor(personInfo) {
+        /**
+         * @property {string} name - Persons name
+         */
+        this.name = personInfo.name
+        /**
+         * @property {string} age - Persons age
+         */
+        this.age = personInfo.age
+    }
+    
+    /**
+     * @property {Function} greet - A greeting with the name and age
+     * @returns void - return void because its just a console.log so its not going to return anything
+     */
+    greet() {
+        console.log(`Hello my name is ${this.name} and i am ${this.age}`)
+    }
+}
+
+/**
+ * See {@link Person}
+ */
+
+const person1 = new Person({
+    name: 'Kaio M.',
+    age: 30
+})
+
+console.log(add(20, 50))
